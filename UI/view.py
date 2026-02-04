@@ -40,6 +40,7 @@ class View:
         self.txt_title = ft.Text("Gestione Artisti", size=30, weight=ft.FontWeight.BOLD)
 
         self.dd_ruolo = ft.Dropdown(label="Seleziona ruolo artista", width=250)
+        self._controller.popola_dropdown_ruolo()
 
 
         self.dd_iniziale = ft.Dropdown(label="Artista Iniziale", width=250, disabled=True)
@@ -48,7 +49,7 @@ class View:
 
         self.btn_crea_grafo = ft.ElevatedButton("Crea Grafo", on_click=self._controller.handle_crea_grafo)
         self.btn_classifica = ft.ElevatedButton("Classifica", disabled=True, on_click=self._controller.handle_classifica)
-        self.btn_cerca_percorso = ft.ElevatedButton("Cerca percorso", disabled=True)
+        self.btn_cerca_percorso = ft.ElevatedButton("Cerca percorso", disabled=True,on_click=self._controller.percorso)
 
         self.list_risultato = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
 
