@@ -41,6 +41,7 @@ class View:
 
         self.dd_ruolo = ft.Dropdown(label="Seleziona ruolo artista", width=250)
 
+
         self.dd_iniziale = ft.Dropdown(label="Artista Iniziale", width=250, disabled=True)
 
         self.input_L = ft.TextField(label="Lunghezza cammino", width=200, value="3")
